@@ -1,0 +1,50 @@
+   39  source ~/.bashrc
+   40  act --version
+   41  touch .github/workflows/01-hello-local.yml
+   42  name: Hello Local
+   43  on:
+   44    workflow_dispatch:
+   45    push:
+   46  jobs:
+   47    teste-basico:
+   48      runs-on: ubuntu-latest
+   49      steps:
+   50        - name: Mensagem inicial
+   51          run: echo "Iniciando testes locais"
+   52        - name: Versão do Node
+   53          run: node -v
+   54        - name: Mensagem final
+   55          run: echo "Finalizado com sucesso!"
+   56  nano .github/workflows/01-hello-local.yml
+   57  act -l
+   58  wsl --update
+   59  docker --version
+   60  act -W .github/workflows/01-hello-local.yml
+   61  docker ps
+   62  cd ~/meu-projeto-ci
+   63  act -W .github/workflows/01-hello-local.yml
+   64  nano .github/workflows/02-pipeline-principal.yml
+   65  act -n
+   66  act -l
+   67  nano README.md
+   68  act -l
+   69  git add .
+   70  git commit -m "README e workflows finais"
+   71  git rm act.zip
+   72  git commit -m "remove act.zip"
+   73  git commit -m "remove act.zip"
+   74  git commit -m "remove act.zip"
+   75  git commit -m "remove act.zip"
+   76  [200~git config --global user.name "Daiana Fernanda Oliveira"
+   77  git config --global user.email ".com"
+   78  git config --global user.name "daioliveirx"
+   79  git config --global user.email "rcrdaiana2003@gmail.com"
+   80  git remote add origin https://github.com/daioliveirx/meu-projeto-ci.git
+   81  git branch -M main
+   82  git push -u origin main
+   83  history 50 > comandos.txt
+   84  cat comandos.txt
+   85  act -n
+   86  act -W .github/workflows/02-pipeline-principal.yml -P ubuntu-latest=node:slim
+   87  act -j scan-de-seguranca
+   88  history 50 > comandos.txt
